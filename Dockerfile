@@ -63,8 +63,6 @@ RUN python ./setup.py install
 RUN cd ..
 RUN pip install git+https://github.com/farizrahman4u/seq2seq.git
 
-COPY /data/key/mkiy.json key.json
-ENV GOOGLE_APPLICATION_CREDENTIALS key.json
 
 # Set up Jupyter Notebook config
 ENV CONFIG /root/.jupyter/jupyter_notebook_config.py
@@ -90,4 +88,6 @@ VOLUME /notebooks
 
 # Run Jupyter Notebook
 WORKDIR "/notebooks"
+COPY /key/mkiy.json key.json
+ENV GOOGLE_APPLICATION_CREDENTIALS key.json
 CMD ["jupyter","notebook", "--allow-root"]
