@@ -51,7 +51,7 @@ RUN git clone https://www.github.com/datalogai/recurrentshop.git
 WORKDIR recurrentshop
 RUN python ./setup.py install
 RUN cd ..
-RUN pip3 install git+https://github.com/farizrahman4u/seq2seq.git
+RUN pip install git+https://github.com/farizrahman4u/seq2seq.git
 
 # Set up Jupyter Notebook config
 ENV CONFIG /root/.jupyter/jupyter_notebook_config.py
