@@ -23,9 +23,15 @@ RUN apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
 # Install TensorFlow CPU version
-ENV TENSORFLOW_VERSION 1.2.1
-RUN pip --no-cache-dir install \
-    http://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-${TENSORFLOW_VERSION}-cp36-cp36m-linux_x86_64.whl
+#ENV TENSORFLOW_VERSION 1.2.1
+#RUN pip --no-cache-dir install \
+#    http://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-${TENSORFLOW_VERSION}-cp36-cp36m-linux_x86_64.whl
+
+#tf_nightly-1.head-cp27-none-linux_x86_64
+
+#https://ci.tensorflow.org/view/tf-nightly/job/tf-nightly-linux/TF_BUILD_IS_OPT=OPT,TF_BUILD_IS_PIP=PIP,TF_BUILD_PYTHON_VERSION=PYTHON2,label=cpu-#slave/lastSuccessfulBuild/artifact/pip_test/whl/tf_nightly-1.head-cp27-none-linux_x86_64.whl
+
+RUN pip install tf-nightly
 
 # Install Python library for Data Science
 RUN pip --no-cache-dir install \
