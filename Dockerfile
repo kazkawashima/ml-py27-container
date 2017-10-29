@@ -3,11 +3,11 @@
 FROM python:2.7
 LABEL maintainer “kazuma<gs2safari'a'gmail.com>”
 
-RUN export CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)"
-RUN echo "deb http://packages.cloud.google.com/apt $CLOUD_SDK_REPO main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
-RUN curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
-RUN apt-get update && sudo apt-get install google-cloud-sdk
-RUN sudo apt-get install google-cloud-sdk-datalab
+#RUN export CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)"
+#RUN echo "deb http://packages.cloud.google.com/apt $CLOUD_SDK_REPO main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
+#RUN curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+#RUN apt-get update && sudo apt-get install google-cloud-sdk
+#RUN sudo apt-get install google-cloud-sdk-datalab
 
 
 # Install dependencies
