@@ -30,9 +30,9 @@ RUN apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
 # Install TensorFlow CPU version
-ENV TENSORFLOW_VERSION 1.2.1
+#ENV TENSORFLOW_VERSION 1.2.1
 #RUN pip --no-cache-dir install \
-    http://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-${TENSORFLOW_VERSION}-cp36-cp36m-linux_x86_64.whl
+#    http://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-${TENSORFLOW_VERSION}-cp36-cp36m-linux_x86_64.whl
 RUN pip install --upgrade tensorflow
 #tf_nightly-1.head-cp27-none-linux_x86_64
 
